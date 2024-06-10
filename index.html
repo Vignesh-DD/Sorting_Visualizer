@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer | Vignesh D.D</title>
+    <link rel="icon" href="./logo.jpg" />
+    <link rel="stylesheet" href="./style.css">
+     <a  href="https://icons8.com/icon/9209/running-rabbit"></a>
+    
+</head>
+<body id="App-body">
+    <div class="nav-bar">
+        <div class="top-heading">
+            <span class="heading">Sorting Visualizer</span>    
+        </div>
+        <div class="nav-items">
+            <div class="dropdown">
+                <button class="select" id="select_algo">
+                    <span class="selected" id="algorithm">Select Algorithm</span>
+                    <div class="caret"></div>
+                </button>
+                <ul class="menu" id="algo_selected">
+                    <li>Bubble Sort</li>
+                    <li>Insertion Sort</li>
+                    <li>Selection Sort</li>
+                    <li>Quick Sort</li>
+                    <li>Merge Sort</li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <span class="size-text">Size</span>
+                <button class="select" id="size-dropdown">
+                    <span class="selected" id="arraySize">10</span>
+                    <div class="caret"></div>
+                </button>
+                <ul class="menu" id="size_menu">
+                    <li>5</li>
+                    <li>10</li>
+                    <li>25</li>
+                    <li>50</li>
+                    <li>75</li>
+                    <li>100</li>
+                </ul>
+            </div>
+            <button class="random-button">
+                <span class="btn-rand">randomize</span>
+            </button>
+        </div>
+    </div>
+    <div class="sorting-visualizer">
+        <div class="sort-chart"></div>
+      
+        <div class="VisualizationControls">
+            <button style="--clr:#f06292" class="sortBtn" disabled>
+                <span>Sort</span><i></i>
+            </button>
+            <div class="dropdown" id="speed_drop">
+                <div class="running-rabbit">
+                    <img width="40" height="25" src="https://img.icons8.com/badges/48/running-rabbit.png" alt="running-rabbit"/>
+                </div>
+                <button class="select" id="speed-dropdown">
+                    <span class="selected" id="arraySpeed">1x</span>
+                    <div class="caret"></div>
+                </button>
+                <ul class="menu" id="speed_menu">
+                    <li>0.25x</li>
+                    <li>0.5x</li>
+                    <li>1x</li>
+                    <li>2x</li>
+                    <li>4x</li>
+                </ul>
+            </div>
+        </div>
+            <div class="ColorKey">
+                <div class="ColorKey__Item">
+                    <div class="ColorKey__Box ColorKey__Unsorted"></div>
+                    <span class="colorDiv">Unsorted</span>  
+                </div>
+            </div>
+        <div class="SortInfo"><hr>
+            <h1 class="algo_heading">Select Algorithm</h1>
+            <div class="SortInfo__Body">
+                <article class="SortInfo__Article">
+                    <p>You must select an algorithm before you can visualize it's execution on an array of numbers.Set the speed and size.<br><br>Note: Once the algorithm visualization is started till it finish its visualization you cannot make any changes.</p>
+                </article>
+                <aside class="SortInfo__Aside">
+                    <h3 class="h3ele">Performance</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Worst-case time complexity</td>
+                                <td><code class="worst_time"></code></td>
+                            </tr>
+                            <tr>
+                                <td>Average time complexity</td>
+                                <td><code class="avg_time"></code></td>
+                            </tr>
+                            <tr>
+                                <td>Best-case time complexity</td>
+                                <td><code class="best_time"></code></td>
+                            </tr>
+                            <tr>
+                                <td>Worst-case space complexity</td>
+                                <td><code class="worst_space"></code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer class="Footer">
+        <section>Designed and Built by 💙 <a href="https://www.linkedin.com/in/vignesh-d-d-121281301" class="Footer__Link">Vignesh D.D</a></section>
+        <section class="Footer__Items"><a href="https://github.com/Vignesh-DD/Sorting-Visualizer.git" class="Footer__Link">Code</a></section>
+    </footer>
+
+    <script src="script.js"> </script>  
+    <script src="./visualization.js"></script>
+
+    <script src="./bubble_sort.js"></script>    
+    <script src="./insertion_sort.js"></script> 
+    <script src="./selection_sort.js"></script>
+    <script src="./quick_sort.js"></script>
+    <script src="./merge_sort.js"></script>
+</body>
+</html>
